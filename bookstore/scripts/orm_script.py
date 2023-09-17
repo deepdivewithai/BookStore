@@ -1,7 +1,5 @@
 from bookstore.models import Book, Customer, Order, OrderDetail
-from datetime import date
 from faker import Faker
-import random
 
 fake = Faker()
 
