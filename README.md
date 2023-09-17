@@ -110,6 +110,10 @@ In this case study, I will analyze an online bookstore's database with several t
     ORDER BY total_orders_placed DESC;
     ```
 
+## SQL Queries
+
+For detailed SQL queries used to create tables and insert data into the database, please refer to the [SQL Queries File](https://github.com/deepdivewithai/BookStore/blob/main/BookStore%20Database.txt).
+
 # Switching to Django ORM
 Now, let's switch to using Django ORM (Object-Relational Mapping) for the same tasks. Below, I'll present the equivalent Django ORM code for these tasks.
 
