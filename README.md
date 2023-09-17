@@ -112,3 +112,5 @@ In this case study, we will analyze an online bookstore's database with several 
 
 # Switching to Django ORM
 Now, let's switch to using Django ORM (Object-Relational Mapping) for the same tasks. Below, I'll present the equivalent Django ORM code for these tasks.
+
+
