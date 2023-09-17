@@ -141,3 +141,51 @@ Now, let's switch to using Django ORM (Object-Relational Mapping) for the same t
 
 ![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Serializers.png)
 
+# Views
+
+1. BooksListView: This view is responsible for handling API requests related to books. It extends the ListCreateAPIView class from Django REST framework, which provides both listing and creating functionality. The queryset attribute is set to fetch all objects from the Book model, and the serializer_class attribute is set to BooksSerializer. This means that when you access the endpoint associated with this view, it can list all books and create new book instances by serializing and deserializing data using the BooksSerializer.
+
+2. CustomerListView: Similar to the BooksListView, this view handles API requests related to customers. It lists all customers and allows the creation of new customer instances using the CustomerSerializer.
+
+3. OrderListView: The OrderListView handles API requests related to orders. It lists all orders and allows the creation of new order instances using the OrderSerializer.
+
+4. OrderDetailListView: Lastly, the OrderDetailListView is responsible for API requests concerning order details. It lists all order details and enables the creation of new order detail instances using the OrderDetailsSerializer.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Views.png)
+
+# Views (Tasks)
+
+In this view, I'm essentially the coordinator for these database-related tasks. I fetch data, perform calculations, and organize the results to be displayed in a web page. The context dictionary helps ensure that the data is properly passed to the template for presentation.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Views(Tasks).png)
+
+# URLS
+
+**How Routing Works with 'http://127.0.0.1:8000/':**
+
+- You start with the base URL of your local Django development server, which is 'http://127.0.0.1:8000/'.
+
+- To access the API, you add the 'api/' part to the URL, making it 'http://127.0.0.1:8000/api/'.
+
+- After that, you append the specific API endpoint you want to access, in this case, 'books/'. So, the complete URL becomes 'http://127.0.0.1:8000/api/books/'.
+
+- When you make a request to 'http://127.0.0.1:8000/api/books/', the routing defined in your Django project directs this URL to the 'BooksListView' view in the 'bookstore' app, which handles requests related to books.
+
+This URL structure is used for accessing the 'books/' API endpoint on your local Django development server. It provides a clear and organized way to interact with different parts of your application when making API requests.
+
+## URLs in Project Folder:
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/URLS 1.png)
+
+## URLs in App Folder:
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/URLS 2.png)
+
+# Result:
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Result 1.png)
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Result 2.png)
+
+
+
+
