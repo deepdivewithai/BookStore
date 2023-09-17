@@ -175,16 +175,16 @@ This URL structure is used for accessing the 'books/' API endpoint on your local
 
 ## URLs in Project Folder:
 
-![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/URLS 1.png)
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/URLS%201.png)
 
 ## URLs in App Folder:
 
-![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/URLS 2.png)
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/URLS%202.png)
 
 # Result:
 
-![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Result 1.png)
-![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Result 2.png)
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Result%201.png)
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Result%202.png)
 
 
 
