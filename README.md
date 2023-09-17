@@ -113,4 +113,31 @@ In this case study, we will analyze an online bookstore's database with several 
 # Switching to Django ORM
 Now, let's switch to using Django ORM (Object-Relational Mapping) for the same tasks. Below, I'll present the equivalent Django ORM code for these tasks.
 
+1. **Books**: Contains information about books.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Book.png)
+
+2. **Customers**: Contains customer information.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Customer.png)
+
+3. **Orders**: Contains order details.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Order.png)
+
+4. **Order_Details**: Contains information about individual book items within each order.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/OrderDetails.png)
+
+# Serializers 
+
+1. BooksSerializer: This serializer is responsible for converting Book model instances into JSON format and vice versa. It does this by specifying the model it's associated with and indicating that all fields from the model (fields = '__all__') should be included in the serialized data. So, when we use this serializer, it will include all information about books in the serialized output.
+
+2. CustomerSerializer: Similar to the BooksSerializer, this serializer is for the Customer model. It allows us to serialize customer data, including their first name, last name, email, and registration date.
+
+3. OrderSerializer: The OrderSerializer is designed to handle the serialization of Order model instances. It includes details like the order date and total amount.
+
+4. OrderDetailsSerializer: Lastly, the OrderDetailsSerializer deals with serializing OrderDetail model instances. It includes information about the book items within each order, such as the quantity and subtotal.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Serializers.png)
 
