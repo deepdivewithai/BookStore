@@ -1,0 +1,112 @@
+BookStore Database
+
+
+Queries for Creating Tables:
+
+1) Books:
+
+CREATE TABLE Books (
+    book_id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    publication_year INT,
+    price DECIMAL(10, 2),
+    available_quantity INT
+);
+
+
+2) Customers:
+
+CREATE TABLE Customers (
+    customer_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    registration_date DATE
+);
+
+
+3) Orders:
+
+CREATE TABLE Orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_id INT REFERENCES Customers(customer_id),
+    order_date DATE,
+    total_amount DECIMAL(10, 2)
+);
+
+4) Order_Details:
+
+CREATE TABLE Order_Details (
+    order_detail_id SERIAL PRIMARY KEY,
+    order_id INT REFERENCES Orders(order_id),
+    book_id INT REFERENCES Books(book_id),
+    quantity INT,
+    subtotal DECIMAL(10, 2)
+);
+
+
+
+# SERIAL is used for auto-incrementing primary key columns.
+# INT is used for integer data types.
+# VARCHAR(x) is used for variable-length character strings.
+# DECIMAL(p, s) is used for fixed-point numbers with precision p and scale s.
+# DATE is used for date values.
+# REFERENCES is used to create foreign key relationships between tables.
+
+
+Adding Data Using Insert Statements:
+
+1. Inserting data into the Books table:
+
+
+INSERT INTO Books (title, author, publication_year, price, available_quantity)
+VALUES
+    ('Book 1', 'Author A', 2022, 19.99, 50),
+    ('Book 2', 'Author B', 2022, 15.99, 30),
+    ('Book 3', 'Author C', 2020, 24.99, 20),
+    ('Book 4', 'Author D', 2019, 12.99, 10),
+    ('Book 5', 'Author E', 2021, 29.99, 5),
+    ('Book 6', 'Author F', 2018, 14.99, 15),
+    ('Book 7', 'Author G', 2000, 18.99, 25);
+
+
+
+2. Inserting data into the Customers table:
+
+INSERT INTO Customers (first_name, last_name, email, registration_date)
+VALUES
+    ('Miles', 'Shane', 'miles.shane@gmail.com', '2022-01-15'),
+    ('Alice', 'Smith', 'alice.smith@example.com', '2021-03-10'),
+    ('Bob', 'Johnson', 'bob.johnson@example.com', '2022-05-20'),
+    ('Eva', 'Clark', 'eva.clark@example.com', '2023-02-28');
+
+
+
+3. Inserting data into the Orders table:
+
+INSERT INTO Orders (customer_id, order_date, total_amount)
+VALUES
+    (1, '2022-12-10', 39.98),
+    (2, '2022-11-05', 35.97),
+    (3, '2022-10-20', 74.97),
+    (4, '2023-01-05', 99.99),
+    (1, '2021-12-01', 15.99);
+
+
+
+4. Insert data into the Order_Details table:
+
+INSERT INTO Order_Details (order_id, book_id, quantity, subtotal)
+VALUES
+    (1, 1, 2, 39.98),
+    (2, 2, 1, 15.99),
+    (3, 3, 3, 74.97),
+    (4, 4, 1, 12.99),
+    (5, 5, 2, 59.98),
+    (1, 3, 1, 12.99),
+    (2, 1, 2, 39.98),
+    (3, 2, 1, 15.99),
+    (4, 5, 3, 89.97),
+    (5, 4, 1, 29.99);
+
