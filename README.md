@@ -133,6 +133,22 @@ Now, let's switch to using Django ORM (Object-Relational Mapping) for the same t
 
 ![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/OrderDetails.png)
 
+# Inserting Fake Data to Populate Models:
+
+1. The script begins by printing a friendly "Hello" message to indicate it's running.
+
+2. It creates fake book data, customer data, order data, and order detail data to simulate a bookstore's database.
+
+3. It efficiently inserts this simulated data into the respective database tables using Django's `bulk_create()` method.
+
+4. Finally, it prints a "Script completed!" message to signal the end of the script.
+
+The script's purpose is to populate the database with sample data for development and testing purposes.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/ORM%20Insert%201.png)
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/ORM%20Insert%202.png)
+
+
 # Serializers 
 
 1. BooksSerializer: This serializer is responsible for converting Book model instances into JSON format and vice versa. It does this by specifying the model it's associated with and indicating that all fields from the model (fields = '__all__') should be included in the serialized data. So, when we use this serializer, it will include all information about books in the serialized output.
