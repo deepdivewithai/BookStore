@@ -1,6 +1,6 @@
 # Online Bookstore Database Case Study
 
-In this case study, we will analyze an online bookstore's database with several tables: Books, Customers, Orders, and Order_Details. We will perform various SQL queries to extract valuable information from the database.
+In this case study, I will analyze an online bookstore's database with several tables: Books, Customers, Orders, and Order_Details. I will perform various SQL queries to extract valuable information from the database.
 
 ## Database Tables
 
@@ -140,4 +140,106 @@ Now, let's switch to using Django ORM (Object-Relational Mapping) for the same t
 4. OrderDetailsSerializer: Lastly, the OrderDetailsSerializer deals with serializing OrderDetail model instances. It includes information about the book items within each order, such as the quantity and subtotal.
 
 ![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Serializers.png)
+
+# Views
+
+1. BooksListView: This view is responsible for handling API requests related to books. It extends the ListCreateAPIView class from Django REST framework, which provides both listing and creating functionality. The queryset attribute is set to fetch all objects from the Book model, and the serializer_class attribute is set to BooksSerializer. This means that when you access the endpoint associated with this view, it can list all books and create new book instances by serializing and deserializing data using the BooksSerializer.
+
+2. CustomerListView: Similar to the BooksListView, this view handles API requests related to customers. It lists all customers and allows the creation of new customer instances using the CustomerSerializer.
+
+3. OrderListView: The OrderListView handles API requests related to orders. It lists all orders and allows the creation of new order instances using the OrderSerializer.
+
+4. OrderDetailListView: Lastly, the OrderDetailListView is responsible for API requests concerning order details. It lists all order details and enables the creation of new order detail instances using the OrderDetailsSerializer.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Views.png)
+
+# Views (Tasks)
+
+In this view, I'm essentially the coordinator for these database-related tasks. I fetch data, perform calculations, and organize the results to be displayed in a web page. The context dictionary helps ensure that the data is properly passed to the template for presentation.
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Views(Tasks).png)
+
+# URLS
+
+**How Routing Works with 'http://127.0.0.1:8000/':**
+
+- You start with the base URL of your local Django development server, which is 'http://127.0.0.1:8000/'.
+
+- To access the API, you add the 'api/' part to the URL, making it 'http://127.0.0.1:8000/api/'.
+
+- After that, you append the specific API endpoint you want to access, in this case, 'books/'. So, the complete URL becomes 'http://127.0.0.1:8000/api/books/'.
+
+- When you make a request to 'http://127.0.0.1:8000/api/books/', the routing defined in your Django project directs this URL to the 'BooksListView' view in the 'bookstore' app, which handles requests related to books.
+
+This URL structure is used for accessing the 'books/' API endpoint on your local Django development server. It provides a clear and organized way to interact with different parts of your application when making API requests.
+
+## URLs in Project Folder:
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/URLS%201.png)
+
+## URLs in App Folder:
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/URLS%202.png)
+
+# Result:
+
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Result%201.png)
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Result%202.png)
+
+
+## To start this Django project after cloning, you should follow these steps:
+
+1. **Clone the Repository:**
+   ```
+   git clone <repository_url>
+   ```
+
+2. **Create a Virtual Environment (Optional but recommended):**
+   ```
+   python -m venv myenv
+   ```
+
+3. **Activate the Virtual Environment (Optional):**
+   - On Windows:
+     ```
+     myenv\Scripts\activate
+     ```
+   - On macOS and Linux:
+     ```
+     source myenv/bin/activate
+     ```
+
+4. **Install Django:**
+   ```
+   pip install django
+   ```
+
+5. **Navigate to the Project Directory:**
+   ```
+   cd bookstore_project
+   ```
+
+6. **Run Migrations:**
+   ```
+   python manage.py migrate
+   ```
+
+7. **Create a Superuser (for Django Admin):**
+   ```
+   python manage.py createsuperuser
+   ```
+
+8. **Start the Development Server:**
+   ```
+   python manage.py runserver
+   ```
+
+9. **Access the Admin Panel:**
+   - Open a web browser and go to: `http://127.0.0.1:8000/admin/`
+   - Log in with the superuser credentials you created.
+
+10. **Access the API Endpoints:**
+    - Use a tool like Postman or your web browser to make API requests to the defined endpoints, e.g., `http://127.0.0.1:8000/api/books/`, `http://127.0.0.1:8000/api/customers/`, etc.
+
+You're now ready to work with the Django project, interact with the API endpoints, and manage data through the Django admin panel.
 
