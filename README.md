@@ -118,3 +118,11 @@ Now, let's switch to using Django ORM (Object-Relational Mapping) for the same t
 
 2. **Customers**: Contains customer information.
 ![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Customer.png)
+
+3. **Orders**: Contains order details.
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/Order.png)
+
+4. **Order_Details**: Contains information about individual book items within each order.
+![Bookstore](https://github.com/deepdivewithai/BookStore/raw/main/Django%20Bookstore%20Images/OrderDetails.png)
+
+
