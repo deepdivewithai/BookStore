@@ -211,7 +211,7 @@ This URL structure is used for accessing the 'books/' API endpoint on your local
 
 1. **Clone the Repository:**
    ```
-   git clone [<repository_url>](https://github.com/deepdivewithai/BookStore.git)
+   git clone https://github.com/deepdivewithai/BookStore.git
    ```
 
 2. **Create a Virtual Environment (Optional but recommended):**
