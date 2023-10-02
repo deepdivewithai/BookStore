@@ -1,4 +1,4 @@
-# Online Bookstore Database Case Study
+# Online Bookstore Database
 
 In this case study, I will analyze an online bookstore's database with several tables: Books, Customers, Orders, and Order_Details. I will perform various SQL queries to extract valuable information from the database.
 
